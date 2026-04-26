@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.venv
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Node / pnpm
+node_modules/
+
+# Local environment (e.g. Prisma DATABASE_URL)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
