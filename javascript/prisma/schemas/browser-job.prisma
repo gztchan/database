@@ -1,0 +1,12 @@
+model BrowserJob {
+  id        String    @id @default(uuid()) @db.Uuid
+  metadata  Json      @default("{}") @map("metadata")
+  status    String    @default("pending") @map("status")
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+  deletedAt DateTime? @map("deleted_at") @db.Timestamptz(6)
+
+  browser Browser?
+
+  @@schema("providence")
+}
